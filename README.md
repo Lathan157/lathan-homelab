@@ -88,5 +88,10 @@ More details: [docs/04-virtualization.md](./docs/04-virtualization.md)
 More details: [docs/05-automation.md](./docs/05-automation.md)  
 
 ---
+## Rack and Cooling
+
+The server rack is powered and cooled using a combination of smart fans and a Furman power conditioner.  
+
+![Server Cabinet](pictures/server-cabinet.jpg)
 
 ## Repository Structure
