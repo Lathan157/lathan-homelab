@@ -53,16 +53,24 @@ A dedicated gaming workstation is also included.
 ---
 
 ## Node 3 – Proxmox Mini PC (Remote Access and Monitoring)
+
 - **Model:** MINIX Z97 Mini PC  
 - **CPU:** Intel Alder Lake N97 (quad-core, up to 3.6 GHz)  
 - **RAM:** 12 GB LPDDR5X  
-- **Storage:** 512GB NVMe SSD  
 - **Networking:** Dual 1 GbE LAN  
-- **Role:**  
-  - Tailscale exit node and subnet router  
-  - Monit monitoring with email alerts  
-  - Lightweight Nextcloud instance  
-  - Redundant access if Node 2 goes down  
+
+### Physical Drives
+- WDC WD10JMVW-11AJGS1 – 1 TB USB HDD  
+- WDC WD20NMVW-11EDZS7 – 2 TB USB HDD  
+- WD My Passport 0740 – 500 GB USB HDD  
+- 512 GB NVMe SSD (system disk)  
+
+### Role
+- Tailscale exit node and subnet router  
+- Monit monitoring with email alerts  
+- Nextcloud instance (storage mounted from Node 1’s NQ-FS-01 USB SSD)  
+- Lightweight backup node using attached USB HDDs  
+  
 
 ---
 
