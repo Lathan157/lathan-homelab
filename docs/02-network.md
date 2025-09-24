@@ -21,6 +21,7 @@ This document describes the network design of the homelab, including ISP connect
 - **VLAN 45**: 192.168.45.0/24 – IoT (ESP32, smart plugs, sensors)  
 - **VLAN 70**: 192.168.70.0/24 – CCTV (Reolink cameras, NVRs)  
 - **VLAN 99**: 192.168.99.0/24 – Management (Switches,APs) 
+
 DHCP for all VLANs is managed by OPNsense.  
 
 ---
