@@ -92,6 +92,6 @@ More details: [docs/05-automation.md](./docs/05-automation.md)
 
 The server rack is powered and cooled using a combination of smart fans and a Furman power conditioner.  
 
-![Server Cabinet](pictures/server-cabinet.jpg)
+![Server Cabinet](docs/pictures/server-cabinet.jpg)
 
 ## Repository Structure
