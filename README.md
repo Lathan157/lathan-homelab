@@ -15,12 +15,15 @@ It is intended both as personal documentation and as a professional portfolio pr
 
 ## Architecture Overview
 The homelab includes:  
-- Proxmox cluster (4 nodes)  
+- Proxmox cluster (5 nodes)  
 - OPNsense and OpenWRT for routing, firewall, and PPPoE  
 - TrueNAS SCALE for ZFS storage management  
 - Docker and Kubernetes (in progress) for service orchestration  
 - Home Assistant for smart home automation  
-- Monitoring via Monit, SMART reports, and custom scripts  
+- Monitoring via Monit, SMART reports, and custom scripts 
+- Website hosting for Portfolio
+- Custom Web Dashboard for Service monitoring and Node Health
+- Frigate and Obico for GPU-powered AI detection
 
 Detailed documentation and diagrams are available in the [docs/](./docs) folder.  
 
@@ -31,20 +34,22 @@ Detailed documentation and diagrams are available in the [docs/](./docs) folder.
 - **Node 2** – i9-9900K, OPNsense VM, OpenWRT VM, networking core  
 - **Node 3** – Intel N97 Mini PC, Tailscale, Monit, Nextcloud  
 - **Node 4** – Ryzen 5 3600, RTX 3060, Frigate NVR, Obico AI, secondary TrueNAS  
-- **Remote Node** – Dell OptiPlex at offsite location for backups and monitoring  
+- **Remote Node** – Dell OptiPlex 390 i5-2400 at offsite location for backups and monitoring  
 
 More details: [docs/01-hardware.md](./docs/01-hardware.md)  
 
 ---
 
 ## Networking
-- Bell 3 Gbps Fiber → OpenWRT → OPNsense  
+- Bell 3 Gbps Fiber → OpenWRT(PPPOE) → OPNsense  
 - VLANs:  
   - VLAN 5 – Trusted  
   - VLAN 15 – Servers  
   - VLAN 25 – Media  
   - VLAN 45 – IoT  
   - VLAN 70 – CCTV  
+  - VLAN 10 - Off-site
+  - VLAN 99 - Management
 - Switching: Ubiquiti US-24, USW-Flex-2.5G-8, YuanLey 8-port PoE  
 - Wi-Fi: UniFi 6+ AP  
 
@@ -69,7 +74,7 @@ More details: [docs/03-storage.md](./docs/03-storage.md)
 - Plex Media Server with GPU transcoding  
 - Home Assistant for automation and IoT integration  
 - Frigate NVR for Reolink cameras (with go2rtc integration)  
-- Pi-hole / AdGuard for network-wide ad blocking  
+- Pi-hole for network-wide ad blocking  
 - Tailscale for secure remote access and subnet routing  
 - Monit for network and service monitoring with email alerts  
 - Nextcloud for file sync and sharing  
