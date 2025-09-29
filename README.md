@@ -52,7 +52,7 @@ More details: [docs/01-hardware.md](./docs/01-hardware.md)
   - VLAN 99 - Management
 - Switching: Ubiquiti US-24, USW-Flex-2.5G-8, YuanLey 8-port PoE  
 - Wi-Fi: UniFi 6+ AP  
-
+![Server Cabinet](docs/diagrams/network-diagram.png)
 More details: [docs/02-network.md](./docs/02-network.md)  
 
 ---
